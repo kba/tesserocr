@@ -154,7 +154,7 @@ class my_build_ext(build_ext, object):
         super(my_build_ext, self).finalize_options()
 
 
-setup(name='tesserocr',
+setup(name='ocrd-fork-tesserocr',
       version=find_version('tesserocr.pyx'),
       description='A simple, Pillow-friendly, Python wrapper around tesseract-ocr API using Cython',
       long_description=read('README.rst'),
