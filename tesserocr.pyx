@@ -1017,6 +1017,9 @@ cdef class PyResultIterator(PyLTRResultIterator):
         """
         return self._riter.ParagraphIsLtr()
 
+    def GetGlyphConfidences(self):
+        return self._riter.GetGlyphConfidences()
+
 
 cdef class PyChoiceIterator:
 

@@ -1,4 +1,6 @@
 from libcpp cimport bool
+from libcpp.vector cimport vector
+from libcpp.pair cimport pair
 ctypedef const char cchar_t
 ctypedef const unsigned char cuchar_t
 
@@ -169,6 +171,7 @@ cdef extern from "tesseract/ltrresultiterator.h" namespace "tesseract" nogil:
 
 cdef extern from "tesseract/resultiterator.h" namespace "tesseract" nogil:
     cdef cppclass ResultIterator(LTRResultIterator):
+        vector[vector[pair[cchar_t *, float]]] GetGlyphConfidences() const;
         bool ParagraphIsLtr() const
 
 cdef extern from "tesseract/renderer.h" namespace "tesseract" nogil:
